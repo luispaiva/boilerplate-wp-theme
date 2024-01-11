@@ -25,6 +25,7 @@
       "editor.formatOnSave": true
     },
     "cSpell.ignoreWords": [
-      "Duicode"
+      "Duicode",
+      "bloginfo"
     ]
   }

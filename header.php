@@ -15,7 +15,7 @@
 
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> data-bs-theme="dark">
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
 	<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -31,10 +31,11 @@
 	<div class="col-lg-8 mx-auto p-4 py-md-5">
 		<!-- Header -->
 		<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-			<a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+			<a href="<?php echo esc_url( site_url() ); ?>" class="d-flex align-items-center text-body-emphasis text-decoration-none">
 				<svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
 				<span class="fs-4">
 					<?php echo esc_html( bloginfo( 'name' ) ); ?>
 				</span>
 			</a>
 		</header>
+
