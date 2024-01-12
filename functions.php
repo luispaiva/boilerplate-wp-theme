@@ -1,6 +1,6 @@
 <?php
 /**
- * Uniclub functions and definitions
+ * Functions and definitions
  *
  * @package Duicode
  */
