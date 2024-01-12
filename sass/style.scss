@@ -1,6 +1,15 @@
+$primary: rgb(127, 24, 127);
+
+$theme-colors: (
+	"primary": $primary,
+);
+
+// Bootstrap 5
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "plugins/woocommerce/woocommerce";
 @import "base/buttons";
-@import "base/links";
 @import "partials/comments";
 @import "partials/forms";
+@import "base/links";
+
+// Plugins
+@import "plugins/woocommerce/woocommerce";
