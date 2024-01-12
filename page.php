@@ -7,41 +7,32 @@
 
 get_header(); ?>
 
-<div class="container">
+<section class="container pt-5 my-5 pb-lg-4">
 
-	<div class="row">
+	<?php
+	if ( have_posts() ) :
 
-		<div class="col-sm-8">
+		if ( is_home() && ! is_front_page() ) :
+			?>
+			<header>
+				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+			</header>
+			<?php
+		endif;
 
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+		while ( have_posts() ) :
+			the_post();
 
-					<?php
-					while ( have_posts() ) :
-						the_post();
+			get_template_part( 'template-parts/content', get_post_type() );
+		endwhile;
 
-						get_template_part( 'views/content', 'page' );
+		the_posts_navigation();
+	else :
+		get_template_part( 'template-parts/content', 'none' );
+	endif;
+	?>
 
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
-
-					endwhile;
-
-					?>
-
-				</main><!-- #main -->
-			</div><!-- #primary -->
-
-		</div><!-- .col- -->
-
-		<div class="col-sm-4">
-			<?php get_sidebar(); ?>
-		</div><!-- .col- -->
-
-	</div><!-- .row -->
-
-</div><!-- .container -->
+</section><!-- #main -->
 
 <?php
 get_footer();

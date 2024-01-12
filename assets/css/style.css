@@ -2024,7 +2024,13 @@ progress {
 	color: #6c757d;
 }
 
-.form-control {
+.form-control, #commentform input[type="text"],
+#commentform input[type="email"],
+#commentform input[type="url"],
+#commentform input[type="password"],
+#commentform input[type="search"],
+#commentform input[type="number"],
+#commentform textarea {
 	display: block;
 	width: 100%;
 	padding: 0.375rem 0.75rem;
@@ -2041,20 +2047,44 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.form-control {
+	.form-control, #commentform input[type="text"],
+	#commentform input[type="email"],
+	#commentform input[type="url"],
+	#commentform input[type="password"],
+	#commentform input[type="search"],
+	#commentform input[type="number"],
+	#commentform textarea {
 		transition: none;
 	}
 }
 
-.form-control[type="file"] {
+.form-control[type="file"], #commentform input[type="file"][type="text"],
+#commentform input[type="file"][type="email"],
+#commentform input[type="file"][type="url"],
+#commentform input[type="file"][type="password"],
+#commentform input[type="file"][type="search"],
+#commentform input[type="file"][type="number"],
+#commentform textarea[type="file"] {
 	overflow: hidden;
 }
 
-.form-control[type="file"]:not(:disabled):not([readonly]) {
+.form-control[type="file"]:not(:disabled):not([readonly]), #commentform input[type="file"]:not(:disabled):not([readonly])[type="text"],
+#commentform input[type="file"]:not(:disabled):not([readonly])[type="email"],
+#commentform input[type="file"]:not(:disabled):not([readonly])[type="url"],
+#commentform input[type="file"]:not(:disabled):not([readonly])[type="password"],
+#commentform input[type="file"]:not(:disabled):not([readonly])[type="search"],
+#commentform input[type="file"]:not(:disabled):not([readonly])[type="number"],
+#commentform textarea[type="file"]:not(:disabled):not([readonly]) {
 	cursor: pointer;
 }
 
-.form-control:focus {
+.form-control:focus, #commentform input:focus[type="text"],
+#commentform input:focus[type="email"],
+#commentform input:focus[type="url"],
+#commentform input:focus[type="password"],
+#commentform input:focus[type="search"],
+#commentform input:focus[type="number"],
+#commentform textarea:focus {
 	color: #212529;
 	background-color: #fff;
 	border-color: #86b7fe;
@@ -2062,21 +2092,45 @@ progress {
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.form-control::-webkit-date-and-time-value {
+.form-control::-webkit-date-and-time-value, #commentform input[type="text"]::-webkit-date-and-time-value,
+#commentform input[type="email"]::-webkit-date-and-time-value,
+#commentform input[type="url"]::-webkit-date-and-time-value,
+#commentform input[type="password"]::-webkit-date-and-time-value,
+#commentform input[type="search"]::-webkit-date-and-time-value,
+#commentform input[type="number"]::-webkit-date-and-time-value,
+#commentform textarea::-webkit-date-and-time-value {
 	height: 1.5em;
 }
 
-.form-control::placeholder {
+.form-control::placeholder, #commentform input[type="text"]::placeholder,
+#commentform input[type="email"]::placeholder,
+#commentform input[type="url"]::placeholder,
+#commentform input[type="password"]::placeholder,
+#commentform input[type="search"]::placeholder,
+#commentform input[type="number"]::placeholder,
+#commentform textarea::placeholder {
 	color: #6c757d;
 	opacity: 1;
 }
 
-.form-control:disabled {
+.form-control:disabled, #commentform input:disabled[type="text"],
+#commentform input:disabled[type="email"],
+#commentform input:disabled[type="url"],
+#commentform input:disabled[type="password"],
+#commentform input:disabled[type="search"],
+#commentform input:disabled[type="number"],
+#commentform textarea:disabled {
 	background-color: #e9ecef;
 	opacity: 1;
 }
 
-.form-control::file-selector-button {
+.form-control::file-selector-button, #commentform input[type="text"]::file-selector-button,
+#commentform input[type="email"]::file-selector-button,
+#commentform input[type="url"]::file-selector-button,
+#commentform input[type="password"]::file-selector-button,
+#commentform input[type="search"]::file-selector-button,
+#commentform input[type="number"]::file-selector-button,
+#commentform textarea::file-selector-button {
 	padding: 0.375rem 0.75rem;
 	margin: -0.375rem -0.75rem;
 	margin-inline-end: 0.75rem;
@@ -2092,12 +2146,24 @@ progress {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.form-control::file-selector-button {
+	.form-control::file-selector-button, #commentform input[type="text"]::file-selector-button,
+	#commentform input[type="email"]::file-selector-button,
+	#commentform input[type="url"]::file-selector-button,
+	#commentform input[type="password"]::file-selector-button,
+	#commentform input[type="search"]::file-selector-button,
+	#commentform input[type="number"]::file-selector-button,
+	#commentform textarea::file-selector-button {
 		transition: none;
 	}
 }
 
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button, #commentform input[type="text"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform input[type="email"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform input[type="url"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform input[type="password"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform input[type="search"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform input[type="number"]:hover:not(:disabled):not([readonly])::file-selector-button,
+#commentform textarea:hover:not(:disabled):not([readonly])::file-selector-button {
 	background-color: #dde0e3;
 }
 
@@ -2148,7 +2214,8 @@ progress {
 	margin-inline-end: 1rem;
 }
 
-textarea.form-control {
+textarea.form-control,
+#commentform textarea {
 	min-height: calc(1.5em + 0.75rem + 2px);
 }
 
@@ -2256,7 +2323,7 @@ textarea.form-control-lg {
 	margin-bottom: 0.125rem;
 }
 
-.form-check .form-check-input {
+.form-check .form-check-input, .form-check #commentform input[type="checkbox"], #commentform .form-check input[type="checkbox"] {
 	float: left;
 	margin-left: -1.5em;
 }
@@ -2267,13 +2334,13 @@ textarea.form-control-lg {
 	text-align: right;
 }
 
-.form-check-reverse .form-check-input {
+.form-check-reverse .form-check-input, .form-check-reverse #commentform input[type="checkbox"], #commentform .form-check-reverse input[type="checkbox"] {
 	float: right;
 	margin-right: -1.5em;
 	margin-left: 0;
 }
 
-.form-check-input {
+.form-check-input, #commentform input[type="checkbox"] {
 	width: 1em;
 	height: 1em;
 	margin-top: 0.25em;
@@ -2287,50 +2354,50 @@ textarea.form-control-lg {
 	print-color-adjust: exact;
 }
 
-.form-check-input[type="checkbox"] {
+.form-check-input[type="checkbox"], #commentform input[type="checkbox"] {
 	border-radius: 0.25em;
 }
 
-.form-check-input[type="radio"] {
+.form-check-input[type="radio"], #commentform input[type="radio"][type="checkbox"] {
 	border-radius: 50%;
 }
 
-.form-check-input:active {
+.form-check-input:active, #commentform input:active[type="checkbox"] {
 	filter: brightness(90%);
 }
 
-.form-check-input:focus {
+.form-check-input:focus, #commentform input:focus[type="checkbox"] {
 	border-color: #86b7fe;
 	outline: 0;
 	box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.form-check-input:checked {
+.form-check-input:checked, #commentform input:checked[type="checkbox"] {
 	background-color: #0d6efd;
 	border-color: #0d6efd;
 }
 
-.form-check-input:checked[type="checkbox"] {
+.form-check-input:checked[type="checkbox"], #commentform input:checked[type="checkbox"] {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 
-.form-check-input:checked[type="radio"] {
+.form-check-input:checked[type="radio"], #commentform input:checked[type="radio"][type="checkbox"] {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
 }
 
-.form-check-input[type="checkbox"]:indeterminate {
+.form-check-input[type="checkbox"]:indeterminate, #commentform input[type="checkbox"]:indeterminate {
 	background-color: #0d6efd;
 	border-color: #0d6efd;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
-.form-check-input:disabled {
+.form-check-input:disabled, #commentform input:disabled[type="checkbox"] {
 	pointer-events: none;
 	filter: none;
 	opacity: 0.5;
 }
 
-.form-check-input[disabled] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label {
+.form-check-input[disabled] ~ .form-check-label, #commentform input[disabled][type="checkbox"] ~ .form-check-label, .form-check-input:disabled ~ .form-check-label, #commentform input:disabled[type="checkbox"] ~ .form-check-label {
 	cursor: default;
 	opacity: 0.5;
 }
@@ -2339,7 +2406,7 @@ textarea.form-control-lg {
 	padding-left: 2.5em;
 }
 
-.form-switch .form-check-input {
+.form-switch .form-check-input, .form-switch #commentform input[type="checkbox"], #commentform .form-switch input[type="checkbox"] {
 	width: 2em;
 	margin-left: -2.5em;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
@@ -2349,16 +2416,16 @@ textarea.form-control-lg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.form-switch .form-check-input {
+	.form-switch .form-check-input, .form-switch #commentform input[type="checkbox"], #commentform .form-switch input[type="checkbox"] {
 		transition: none;
 	}
 }
 
-.form-switch .form-check-input:focus {
+.form-switch .form-check-input:focus, .form-switch #commentform input:focus[type="checkbox"], #commentform .form-switch input:focus[type="checkbox"] {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
 }
 
-.form-switch .form-check-input:checked {
+.form-switch .form-check-input:checked, .form-switch #commentform input:checked[type="checkbox"], #commentform .form-switch input:checked[type="checkbox"] {
 	background-position: right center;
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
@@ -2368,7 +2435,7 @@ textarea.form-control-lg {
 	padding-left: 0;
 }
 
-.form-switch.form-check-reverse .form-check-input {
+.form-switch.form-check-reverse .form-check-input, .form-switch.form-check-reverse #commentform input[type="checkbox"], #commentform .form-switch.form-check-reverse input[type="checkbox"] {
 	margin-right: -2.5em;
 	margin-left: 0;
 }
@@ -2384,7 +2451,7 @@ textarea.form-control-lg {
 	pointer-events: none;
 }
 
-.btn-check[disabled] + .btn, .btn-check[disabled] + .submit, .btn-check:disabled + .btn, .btn-check:disabled + .submit {
+.btn-check[disabled] + .btn, #commentform .btn-check[disabled] + .submit, .btn-check:disabled + .btn, #commentform .btn-check:disabled + .submit {
 	pointer-events: none;
 	filter: none;
 	opacity: 0.65;
@@ -2491,7 +2558,13 @@ textarea.form-control-lg {
 	position: relative;
 }
 
-.form-floating > .form-control,
+.form-floating > .form-control, #commentform .form-floating > input[type="text"],
+#commentform .form-floating > input[type="email"],
+#commentform .form-floating > input[type="url"],
+#commentform .form-floating > input[type="password"],
+#commentform .form-floating > input[type="search"],
+#commentform .form-floating > input[type="number"],
+#commentform .form-floating > textarea,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
 	height: calc(3.5rem + 2px);
@@ -2521,24 +2594,54 @@ textarea.form-control-lg {
 	}
 }
 
-.form-floating > .form-control,
+.form-floating > .form-control, #commentform .form-floating > input[type="text"],
+#commentform .form-floating > input[type="email"],
+#commentform .form-floating > input[type="url"],
+#commentform .form-floating > input[type="password"],
+#commentform .form-floating > input[type="search"],
+#commentform .form-floating > input[type="number"],
+#commentform .form-floating > textarea,
 .form-floating > .form-control-plaintext {
 	padding: 1rem 0.75rem;
 }
 
-.form-floating > .form-control::placeholder,
+.form-floating > .form-control::placeholder, #commentform .form-floating > input[type="text"]::placeholder,
+#commentform .form-floating > input[type="email"]::placeholder,
+#commentform .form-floating > input[type="url"]::placeholder,
+#commentform .form-floating > input[type="password"]::placeholder,
+#commentform .form-floating > input[type="search"]::placeholder,
+#commentform .form-floating > input[type="number"]::placeholder,
+#commentform .form-floating > textarea::placeholder,
 .form-floating > .form-control-plaintext::placeholder {
 	color: transparent;
 }
 
-.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown),
+.form-floating > .form-control:focus, #commentform .form-floating > input:focus[type="text"],
+#commentform .form-floating > input:focus[type="email"],
+#commentform .form-floating > input:focus[type="url"],
+#commentform .form-floating > input:focus[type="password"],
+#commentform .form-floating > input:focus[type="search"],
+#commentform .form-floating > input:focus[type="number"],
+#commentform .form-floating > textarea:focus, .form-floating > .form-control:not(:placeholder-shown), #commentform .form-floating > input:not(:placeholder-shown)[type="text"],
+#commentform .form-floating > input:not(:placeholder-shown)[type="email"],
+#commentform .form-floating > input:not(:placeholder-shown)[type="url"],
+#commentform .form-floating > input:not(:placeholder-shown)[type="password"],
+#commentform .form-floating > input:not(:placeholder-shown)[type="search"],
+#commentform .form-floating > input:not(:placeholder-shown)[type="number"],
+#commentform .form-floating > textarea:not(:placeholder-shown),
 .form-floating > .form-control-plaintext:focus,
 .form-floating > .form-control-plaintext:not(:placeholder-shown) {
 	padding-top: 1.625rem;
 	padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:-webkit-autofill,
+.form-floating > .form-control:-webkit-autofill, #commentform .form-floating > input:-webkit-autofill[type="text"],
+#commentform .form-floating > input:-webkit-autofill[type="email"],
+#commentform .form-floating > input:-webkit-autofill[type="url"],
+#commentform .form-floating > input:-webkit-autofill[type="password"],
+#commentform .form-floating > input:-webkit-autofill[type="search"],
+#commentform .form-floating > input:-webkit-autofill[type="number"],
+#commentform .form-floating > textarea:-webkit-autofill,
 .form-floating > .form-control-plaintext:-webkit-autofill {
 	padding-top: 1.625rem;
 	padding-bottom: 0.625rem;
@@ -2549,15 +2652,22 @@ textarea.form-control-lg {
 	padding-bottom: 0.625rem;
 }
 
-.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:focus ~ label, #commentform .form-floating > input:focus[type="text"] ~ label, #commentform .form-floating > input:focus[type="email"] ~ label, #commentform .form-floating > input:focus[type="url"] ~ label, #commentform .form-floating > input:focus[type="password"] ~ label, #commentform .form-floating > input:focus[type="search"] ~ label, #commentform .form-floating > input:focus[type="number"] ~ label, #commentform .form-floating > textarea:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="text"] ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="email"] ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="url"] ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="password"] ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="search"] ~ label,
+#commentform .form-floating > input:not(:placeholder-shown)[type="number"] ~ label,
+#commentform .form-floating > textarea:not(:placeholder-shown) ~ label,
 .form-floating > .form-control-plaintext ~ label,
 .form-floating > .form-select ~ label {
 	opacity: 0.65;
 	transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 
-.form-floating > .form-control:-webkit-autofill ~ label {
+.form-floating > .form-control:-webkit-autofill ~ label, #commentform .form-floating > input:-webkit-autofill[type="text"] ~ label, #commentform .form-floating > input:-webkit-autofill[type="email"] ~ label, #commentform .form-floating > input:-webkit-autofill[type="url"] ~ label, #commentform .form-floating > input:-webkit-autofill[type="password"] ~ label, #commentform .form-floating > input:-webkit-autofill[type="search"] ~ label, #commentform .form-floating > input:-webkit-autofill[type="number"] ~ label, #commentform .form-floating > textarea:-webkit-autofill ~ label {
 	opacity: 0.65;
 	transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
@@ -2574,7 +2684,13 @@ textarea.form-control-lg {
 	width: 100%;
 }
 
-.input-group > .form-control,
+.input-group > .form-control, #commentform .input-group > input[type="text"],
+#commentform .input-group > input[type="email"],
+#commentform .input-group > input[type="url"],
+#commentform .input-group > input[type="password"],
+#commentform .input-group > input[type="search"],
+#commentform .input-group > input[type="number"],
+#commentform .input-group > textarea,
 .input-group > .form-select,
 .input-group > .form-floating {
 	position: relative;
@@ -2583,18 +2699,24 @@ textarea.form-control-lg {
 	min-width: 0;
 }
 
-.input-group > .form-control:focus,
+.input-group > .form-control:focus, #commentform .input-group > input:focus[type="text"],
+#commentform .input-group > input:focus[type="email"],
+#commentform .input-group > input:focus[type="url"],
+#commentform .input-group > input:focus[type="password"],
+#commentform .input-group > input:focus[type="search"],
+#commentform .input-group > input:focus[type="number"],
+#commentform .input-group > textarea:focus,
 .input-group > .form-select:focus,
 .input-group > .form-floating:focus-within {
 	z-index: 5;
 }
 
-.input-group .btn, .input-group .submit {
+.input-group .btn, .input-group #commentform .submit, #commentform .input-group .submit {
 	position: relative;
 	z-index: 2;
 }
 
-.input-group .btn:focus, .input-group .submit:focus {
+.input-group .btn:focus, .input-group #commentform .submit:focus, #commentform .input-group .submit:focus {
 	z-index: 5;
 }
 
@@ -2613,21 +2735,33 @@ textarea.form-control-lg {
 	border-radius: 0.375rem;
 }
 
-.input-group-lg > .form-control,
+.input-group-lg > .form-control, #commentform .input-group-lg > input[type="text"],
+#commentform .input-group-lg > input[type="email"],
+#commentform .input-group-lg > input[type="url"],
+#commentform .input-group-lg > input[type="password"],
+#commentform .input-group-lg > input[type="search"],
+#commentform .input-group-lg > input[type="number"],
+#commentform .input-group-lg > textarea,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn,
-.input-group-lg > .submit {
+#commentform .input-group-lg > .submit {
 	padding: 0.5rem 1rem;
 	font-size: 1.25rem;
 	border-radius: 0.5rem;
 }
 
-.input-group-sm > .form-control,
+.input-group-sm > .form-control, #commentform .input-group-sm > input[type="text"],
+#commentform .input-group-sm > input[type="email"],
+#commentform .input-group-sm > input[type="url"],
+#commentform .input-group-sm > input[type="password"],
+#commentform .input-group-sm > input[type="search"],
+#commentform .input-group-sm > input[type="number"],
+#commentform .input-group-sm > textarea,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn,
-.input-group-sm > .submit {
+#commentform .input-group-sm > .submit {
 	padding: 0.25rem 0.5rem;
 	font-size: 0.875rem;
 	border-radius: 0.25rem;
@@ -2641,6 +2775,13 @@ textarea.form-control-lg {
 .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3),
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control,
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="text"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="email"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="url"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="password"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="search"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > input[type="number"],
+#commentform .input-group:not(.has-validation) > .form-floating:not(:last-child) > textarea,
 .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
@@ -2649,6 +2790,13 @@ textarea.form-control-lg {
 .input-group.has-validation > :nth-last-child(n + 3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n + 4),
 .input-group.has-validation > .form-floating:nth-last-child(n + 3) > .form-control,
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="text"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="email"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="url"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="password"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="search"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > input[type="number"],
+#commentform .input-group.has-validation > .form-floating:nth-last-child(n + 3) > textarea,
 .input-group.has-validation > .form-floating:nth-last-child(n + 3) > .form-select {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
@@ -2660,7 +2808,13 @@ textarea.form-control-lg {
 	border-bottom-left-radius: 0;
 }
 
-.input-group > .form-floating:not(:first-child) > .form-control,
+.input-group > .form-floating:not(:first-child) > .form-control, #commentform .input-group > .form-floating:not(:first-child) > input[type="text"],
+#commentform .input-group > .form-floating:not(:first-child) > input[type="email"],
+#commentform .input-group > .form-floating:not(:first-child) > input[type="url"],
+#commentform .input-group > .form-floating:not(:first-child) > input[type="password"],
+#commentform .input-group > .form-floating:not(:first-child) > input[type="search"],
+#commentform .input-group > .form-floating:not(:first-child) > input[type="number"],
+#commentform .input-group > .form-floating:not(:first-child) > textarea,
 .input-group > .form-floating:not(:first-child) > .form-select {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
@@ -2695,7 +2849,19 @@ textarea.form-control-lg {
 	display: block;
 }
 
-.was-validated .form-control:valid, .form-control.is-valid {
+.was-validated .form-control:valid, .was-validated #commentform input:valid[type="text"], #commentform .was-validated input:valid[type="text"],
+.was-validated #commentform input:valid[type="email"], #commentform .was-validated input:valid[type="email"],
+.was-validated #commentform input:valid[type="url"], #commentform .was-validated input:valid[type="url"],
+.was-validated #commentform input:valid[type="password"], #commentform .was-validated input:valid[type="password"],
+.was-validated #commentform input:valid[type="search"], #commentform .was-validated input:valid[type="search"],
+.was-validated #commentform input:valid[type="number"], #commentform .was-validated input:valid[type="number"],
+.was-validated #commentform textarea:valid, #commentform .was-validated textarea:valid, .form-control.is-valid, #commentform input.is-valid[type="text"],
+#commentform input.is-valid[type="email"],
+#commentform input.is-valid[type="url"],
+#commentform input.is-valid[type="password"],
+#commentform input.is-valid[type="search"],
+#commentform input.is-valid[type="number"],
+#commentform textarea.is-valid {
 	border-color: #198754;
 	padding-right: calc(1.5em + 0.75rem);
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
@@ -2704,12 +2870,26 @@ textarea.form-control-lg {
 	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .was-validated #commentform input:valid:focus[type="text"], #commentform .was-validated input:valid:focus[type="text"],
+.was-validated #commentform input:valid:focus[type="email"], #commentform .was-validated input:valid:focus[type="email"],
+.was-validated #commentform input:valid:focus[type="url"], #commentform .was-validated input:valid:focus[type="url"],
+.was-validated #commentform input:valid:focus[type="password"], #commentform .was-validated input:valid:focus[type="password"],
+.was-validated #commentform input:valid:focus[type="search"], #commentform .was-validated input:valid:focus[type="search"],
+.was-validated #commentform input:valid:focus[type="number"], #commentform .was-validated input:valid:focus[type="number"],
+.was-validated #commentform textarea:valid:focus, #commentform .was-validated textarea:valid:focus, .form-control.is-valid:focus, #commentform input.is-valid:focus[type="text"],
+#commentform input.is-valid:focus[type="email"],
+#commentform input.is-valid:focus[type="url"],
+#commentform input.is-valid:focus[type="password"],
+#commentform input.is-valid:focus[type="search"],
+#commentform input.is-valid:focus[type="number"],
+#commentform textarea.is-valid:focus {
 	border-color: #198754;
 	box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated textarea.form-control:valid, textarea.form-control.is-valid {
+.was-validated textarea.form-control:valid,
+.was-validated #commentform textarea:valid, #commentform .was-validated textarea:valid, textarea.form-control.is-valid,
+#commentform textarea.is-valid {
 	padding-right: calc(1.5em + 0.75rem);
 	background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2734,27 +2914,39 @@ textarea.form-control-lg {
 	width: calc(3rem + calc(1.5em + 0.75rem));
 }
 
-.was-validated .form-check-input:valid, .form-check-input.is-valid {
+.was-validated .form-check-input:valid, .was-validated #commentform input:valid[type="checkbox"], #commentform .was-validated input:valid[type="checkbox"], .form-check-input.is-valid, #commentform input.is-valid[type="checkbox"] {
 	border-color: #198754;
 }
 
-.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
+.was-validated .form-check-input:valid:checked, .was-validated #commentform input:valid:checked[type="checkbox"], #commentform .was-validated input:valid:checked[type="checkbox"], .form-check-input.is-valid:checked, #commentform input.is-valid:checked[type="checkbox"] {
 	background-color: #198754;
 }
 
-.was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
+.was-validated .form-check-input:valid:focus, .was-validated #commentform input:valid:focus[type="checkbox"], #commentform .was-validated input:valid:focus[type="checkbox"], .form-check-input.is-valid:focus, #commentform input.is-valid:focus[type="checkbox"] {
 	box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
-.was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+.was-validated .form-check-input:valid ~ .form-check-label, .was-validated #commentform input:valid[type="checkbox"] ~ .form-check-label, #commentform .was-validated input:valid[type="checkbox"] ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label, #commentform input.is-valid[type="checkbox"] ~ .form-check-label {
 	color: #198754;
 }
 
-.form-check-inline .form-check-input ~ .valid-feedback {
+.form-check-inline .form-check-input ~ .valid-feedback, .form-check-inline #commentform input[type="checkbox"] ~ .valid-feedback, #commentform .form-check-inline input[type="checkbox"] ~ .valid-feedback {
 	margin-left: .5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, .was-validated
+.was-validated .input-group > .form-control:not(:focus):valid, .was-validated #commentform .input-group > input:not(:focus):valid[type="text"], #commentform .was-validated .input-group > input:not(:focus):valid[type="text"],
+.was-validated #commentform .input-group > input:not(:focus):valid[type="email"], #commentform .was-validated .input-group > input:not(:focus):valid[type="email"],
+.was-validated #commentform .input-group > input:not(:focus):valid[type="url"], #commentform .was-validated .input-group > input:not(:focus):valid[type="url"],
+.was-validated #commentform .input-group > input:not(:focus):valid[type="password"], #commentform .was-validated .input-group > input:not(:focus):valid[type="password"],
+.was-validated #commentform .input-group > input:not(:focus):valid[type="search"], #commentform .was-validated .input-group > input:not(:focus):valid[type="search"],
+.was-validated #commentform .input-group > input:not(:focus):valid[type="number"], #commentform .was-validated .input-group > input:not(:focus):valid[type="number"],
+.was-validated #commentform .input-group > textarea:not(:focus):valid, #commentform .was-validated .input-group > textarea:not(:focus):valid, .input-group > .form-control:not(:focus).is-valid, #commentform .input-group > input:not(:focus).is-valid[type="text"],
+#commentform .input-group > input:not(:focus).is-valid[type="email"],
+#commentform .input-group > input:not(:focus).is-valid[type="url"],
+#commentform .input-group > input:not(:focus).is-valid[type="password"],
+#commentform .input-group > input:not(:focus).is-valid[type="search"],
+#commentform .input-group > input:not(:focus).is-valid[type="number"],
+#commentform .input-group > textarea:not(:focus).is-valid, .was-validated
 .input-group > .form-select:not(:focus):valid,
 .input-group > .form-select:not(:focus).is-valid, .was-validated
 .input-group > .form-floating:not(:focus-within):valid,
@@ -2791,7 +2983,19 @@ textarea.form-control-lg {
 	display: block;
 }
 
-.was-validated .form-control:invalid, .form-control.is-invalid {
+.was-validated .form-control:invalid, .was-validated #commentform input:invalid[type="text"], #commentform .was-validated input:invalid[type="text"],
+.was-validated #commentform input:invalid[type="email"], #commentform .was-validated input:invalid[type="email"],
+.was-validated #commentform input:invalid[type="url"], #commentform .was-validated input:invalid[type="url"],
+.was-validated #commentform input:invalid[type="password"], #commentform .was-validated input:invalid[type="password"],
+.was-validated #commentform input:invalid[type="search"], #commentform .was-validated input:invalid[type="search"],
+.was-validated #commentform input:invalid[type="number"], #commentform .was-validated input:invalid[type="number"],
+.was-validated #commentform textarea:invalid, #commentform .was-validated textarea:invalid, .form-control.is-invalid, #commentform input.is-invalid[type="text"],
+#commentform input.is-invalid[type="email"],
+#commentform input.is-invalid[type="url"],
+#commentform input.is-invalid[type="password"],
+#commentform input.is-invalid[type="search"],
+#commentform input.is-invalid[type="number"],
+#commentform textarea.is-invalid {
 	border-color: #dc3545;
 	padding-right: calc(1.5em + 0.75rem);
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -2800,12 +3004,26 @@ textarea.form-control-lg {
 	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+.was-validated .form-control:invalid:focus, .was-validated #commentform input:invalid:focus[type="text"], #commentform .was-validated input:invalid:focus[type="text"],
+.was-validated #commentform input:invalid:focus[type="email"], #commentform .was-validated input:invalid:focus[type="email"],
+.was-validated #commentform input:invalid:focus[type="url"], #commentform .was-validated input:invalid:focus[type="url"],
+.was-validated #commentform input:invalid:focus[type="password"], #commentform .was-validated input:invalid:focus[type="password"],
+.was-validated #commentform input:invalid:focus[type="search"], #commentform .was-validated input:invalid:focus[type="search"],
+.was-validated #commentform input:invalid:focus[type="number"], #commentform .was-validated input:invalid:focus[type="number"],
+.was-validated #commentform textarea:invalid:focus, #commentform .was-validated textarea:invalid:focus, .form-control.is-invalid:focus, #commentform input.is-invalid:focus[type="text"],
+#commentform input.is-invalid:focus[type="email"],
+#commentform input.is-invalid:focus[type="url"],
+#commentform input.is-invalid:focus[type="password"],
+#commentform input.is-invalid:focus[type="search"],
+#commentform input.is-invalid:focus[type="number"],
+#commentform textarea.is-invalid:focus {
 	border-color: #dc3545;
 	box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
+.was-validated textarea.form-control:invalid,
+.was-validated #commentform textarea:invalid, #commentform .was-validated textarea:invalid, textarea.form-control.is-invalid,
+#commentform textarea.is-invalid {
 	padding-right: calc(1.5em + 0.75rem);
 	background-position: top calc(0.375em + 0.1875rem) right calc(0.375em + 0.1875rem);
 }
@@ -2830,27 +3048,39 @@ textarea.form-control-lg {
 	width: calc(3rem + calc(1.5em + 0.75rem));
 }
 
-.was-validated .form-check-input:invalid, .form-check-input.is-invalid {
+.was-validated .form-check-input:invalid, .was-validated #commentform input:invalid[type="checkbox"], #commentform .was-validated input:invalid[type="checkbox"], .form-check-input.is-invalid, #commentform input.is-invalid[type="checkbox"] {
 	border-color: #dc3545;
 }
 
-.was-validated .form-check-input:invalid:checked, .form-check-input.is-invalid:checked {
+.was-validated .form-check-input:invalid:checked, .was-validated #commentform input:invalid:checked[type="checkbox"], #commentform .was-validated input:invalid:checked[type="checkbox"], .form-check-input.is-invalid:checked, #commentform input.is-invalid:checked[type="checkbox"] {
 	background-color: #dc3545;
 }
 
-.was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
+.was-validated .form-check-input:invalid:focus, .was-validated #commentform input:invalid:focus[type="checkbox"], #commentform .was-validated input:invalid:focus[type="checkbox"], .form-check-input.is-invalid:focus, #commentform input.is-invalid:focus[type="checkbox"] {
 	box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
 }
 
-.was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
+.was-validated .form-check-input:invalid ~ .form-check-label, .was-validated #commentform input:invalid[type="checkbox"] ~ .form-check-label, #commentform .was-validated input:invalid[type="checkbox"] ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label, #commentform input.is-invalid[type="checkbox"] ~ .form-check-label {
 	color: #dc3545;
 }
 
-.form-check-inline .form-check-input ~ .invalid-feedback {
+.form-check-inline .form-check-input ~ .invalid-feedback, .form-check-inline #commentform input[type="checkbox"] ~ .invalid-feedback, #commentform .form-check-inline input[type="checkbox"] ~ .invalid-feedback {
 	margin-left: .5em;
 }
 
-.was-validated .input-group > .form-control:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, .was-validated
+.was-validated .input-group > .form-control:not(:focus):invalid, .was-validated #commentform .input-group > input:not(:focus):invalid[type="text"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="text"],
+.was-validated #commentform .input-group > input:not(:focus):invalid[type="email"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="email"],
+.was-validated #commentform .input-group > input:not(:focus):invalid[type="url"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="url"],
+.was-validated #commentform .input-group > input:not(:focus):invalid[type="password"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="password"],
+.was-validated #commentform .input-group > input:not(:focus):invalid[type="search"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="search"],
+.was-validated #commentform .input-group > input:not(:focus):invalid[type="number"], #commentform .was-validated .input-group > input:not(:focus):invalid[type="number"],
+.was-validated #commentform .input-group > textarea:not(:focus):invalid, #commentform .was-validated .input-group > textarea:not(:focus):invalid, .input-group > .form-control:not(:focus).is-invalid, #commentform .input-group > input:not(:focus).is-invalid[type="text"],
+#commentform .input-group > input:not(:focus).is-invalid[type="email"],
+#commentform .input-group > input:not(:focus).is-invalid[type="url"],
+#commentform .input-group > input:not(:focus).is-invalid[type="password"],
+#commentform .input-group > input:not(:focus).is-invalid[type="search"],
+#commentform .input-group > input:not(:focus).is-invalid[type="number"],
+#commentform .input-group > textarea:not(:focus).is-invalid, .was-validated
 .input-group > .form-select:not(:focus):invalid,
 .input-group > .form-select:not(:focus).is-invalid, .was-validated
 .input-group > .form-floating:not(:focus-within):invalid,
@@ -2858,7 +3088,7 @@ textarea.form-control-lg {
 	z-index: 4;
 }
 
-.btn, .submit {
+.btn, #commentform .submit {
 	--bs-btn-padding-x: 0.75rem;
 	--bs-btn-padding-y: 0.375rem;
 	--bs-btn-font-family: ;
@@ -2893,24 +3123,24 @@ textarea.form-control-lg {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.btn, .submit {
+	.btn, #commentform .submit {
 		transition: none;
 	}
 }
 
-.btn:hover, .submit:hover {
+.btn:hover, #commentform .submit:hover {
 	color: var(--bs-btn-hover-color);
 	background-color: var(--bs-btn-hover-bg);
 	border-color: var(--bs-btn-hover-border-color);
 }
 
-.btn-check + .btn:hover, .btn-check + .submit:hover {
+.btn-check + .btn:hover, #commentform .btn-check + .submit:hover {
 	color: var(--bs-btn-color);
 	background-color: var(--bs-btn-bg);
 	border-color: var(--bs-btn-border-color);
 }
 
-.btn:focus-visible, .submit:focus-visible {
+.btn:focus-visible, #commentform .submit:focus-visible {
 	color: var(--bs-btn-hover-color);
 	background-color: var(--bs-btn-hover-bg);
 	border-color: var(--bs-btn-hover-border-color);
@@ -2918,29 +3148,30 @@ textarea.form-control-lg {
 	box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn-check:focus-visible + .btn, .btn-check:focus-visible + .submit {
+.btn-check:focus-visible + .btn, #commentform .btn-check:focus-visible + .submit {
 	border-color: var(--bs-btn-hover-border-color);
 	outline: 0;
 	box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn-check:checked + .btn, .btn-check:checked + .submit,
+.btn-check:checked + .btn, #commentform .btn-check:checked + .submit,
 :not(.btn-check) + .btn:active,
-:not(.btn-check) + .submit:active, .btn:first-child:active, .submit:first-child:active, .btn.active, .active.submit, .btn.show, .show.submit {
+#commentform :not(.btn-check) + .submit:active, .btn:first-child:active, #commentform .submit:first-child:active, .btn.active, #commentform .active.submit, .btn.show, #commentform .show.submit {
 	color: var(--bs-btn-active-color);
 	background-color: var(--bs-btn-active-bg);
 	border-color: var(--bs-btn-active-border-color);
 }
 
-.btn-check:checked + .btn:focus-visible, .btn-check:checked + .submit:focus-visible,
+.btn-check:checked + .btn:focus-visible, #commentform .btn-check:checked + .submit:focus-visible,
 :not(.btn-check) + .btn:active:focus-visible,
-:not(.btn-check) + .submit:active:focus-visible, .btn:first-child:active:focus-visible, .submit:first-child:active:focus-visible, .btn.active:focus-visible, .active.submit:focus-visible, .btn.show:focus-visible, .show.submit:focus-visible {
+#commentform :not(.btn-check) + .submit:active:focus-visible, .btn:first-child:active:focus-visible, #commentform .submit:first-child:active:focus-visible, .btn.active:focus-visible, #commentform .active.submit:focus-visible, .btn.show:focus-visible, #commentform .show.submit:focus-visible {
 	box-shadow: var(--bs-btn-focus-box-shadow);
 }
 
-.btn:disabled, .submit:disabled, .btn.disabled, .disabled.submit,
+.btn:disabled, #commentform .submit:disabled, .btn.disabled, #commentform .disabled.submit,
 fieldset:disabled .btn,
-fieldset:disabled .submit {
+fieldset:disabled #commentform .submit,
+#commentform fieldset:disabled .submit {
 	color: var(--bs-btn-disabled-color);
 	pointer-events: none;
 	background-color: var(--bs-btn-disabled-bg);
@@ -2948,7 +3179,7 @@ fieldset:disabled .submit {
 	opacity: var(--bs-btn-disabled-opacity);
 }
 
-.btn-primary, .submit {
+.btn-primary, #commentform .submit {
 	--bs-btn-color: #fff;
 	--bs-btn-bg: #0d6efd;
 	--bs-btn-border-color: #0d6efd;
@@ -3244,14 +3475,14 @@ fieldset:disabled .submit {
 	color: var(--bs-btn-hover-color);
 }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .submit {
+.btn-lg, .btn-group-lg > .btn, #commentform .btn-group-lg > .submit {
 	--bs-btn-padding-y: 0.5rem;
 	--bs-btn-padding-x: 1rem;
 	--bs-btn-font-size: 1.25rem;
 	--bs-btn-border-radius: 0.5rem;
 }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .submit {
+.btn-sm, .btn-group-sm > .btn, #commentform .btn-group-sm > .submit {
 	--bs-btn-padding-y: 0.25rem;
 	--bs-btn-padding-x: 0.5rem;
 	--bs-btn-font-size: 0.875rem;
@@ -3646,36 +3877,36 @@ fieldset:disabled .submit {
 	vertical-align: middle;
 }
 
-.btn-group > .btn, .btn-group > .submit,
+.btn-group > .btn, #commentform .btn-group > .submit,
 .btn-group-vertical > .btn,
-.btn-group-vertical > .submit {
+#commentform .btn-group-vertical > .submit {
 	position: relative;
 	flex: 1 1 auto;
 }
 
-.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .submit,
+.btn-group > .btn-check:checked + .btn, #commentform .btn-group > .btn-check:checked + .submit,
 .btn-group > .btn-check:focus + .btn,
-.btn-group > .btn-check:focus + .submit,
+#commentform .btn-group > .btn-check:focus + .submit,
 .btn-group > .btn:hover,
-.btn-group > .submit:hover,
+#commentform .btn-group > .submit:hover,
 .btn-group > .btn:focus,
-.btn-group > .submit:focus,
+#commentform .btn-group > .submit:focus,
 .btn-group > .btn:active,
-.btn-group > .submit:active,
+#commentform .btn-group > .submit:active,
 .btn-group > .btn.active,
-.btn-group > .active.submit,
+#commentform .btn-group > .active.submit,
 .btn-group-vertical > .btn-check:checked + .btn,
-.btn-group-vertical > .btn-check:checked + .submit,
+#commentform .btn-group-vertical > .btn-check:checked + .submit,
 .btn-group-vertical > .btn-check:focus + .btn,
-.btn-group-vertical > .btn-check:focus + .submit,
+#commentform .btn-group-vertical > .btn-check:focus + .submit,
 .btn-group-vertical > .btn:hover,
-.btn-group-vertical > .submit:hover,
+#commentform .btn-group-vertical > .submit:hover,
 .btn-group-vertical > .btn:focus,
-.btn-group-vertical > .submit:focus,
+#commentform .btn-group-vertical > .submit:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .submit:active,
+#commentform .btn-group-vertical > .submit:active,
 .btn-group-vertical > .btn.active,
-.btn-group-vertical > .active.submit {
+#commentform .btn-group-vertical > .active.submit {
 	z-index: 1;
 }
 
@@ -3693,25 +3924,25 @@ fieldset:disabled .submit {
 	border-radius: 0.375rem;
 }
 
-.btn-group > :not(.btn-check:first-child) + .btn, .btn-group > :not(.btn-check:first-child) + .submit,
+.btn-group > :not(.btn-check:first-child) + .btn, #commentform .btn-group > :not(.btn-check:first-child) + .submit,
 .btn-group > .btn-group:not(:first-child) {
 	margin-left: -1px;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .submit:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), #commentform .btn-group > .submit:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn.dropdown-toggle-split:first-child,
-.btn-group > .dropdown-toggle-split.submit:first-child,
+#commentform .btn-group > .dropdown-toggle-split.submit:first-child,
 .btn-group > .btn-group:not(:last-child) > .btn,
-.btn-group > .btn-group:not(:last-child) > .submit {
+#commentform .btn-group > .btn-group:not(:last-child) > .submit {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
 
-.btn-group > .btn:nth-child(n + 3), .btn-group > .submit:nth-child(n + 3),
+.btn-group > .btn:nth-child(n + 3), #commentform .btn-group > .submit:nth-child(n + 3),
 .btn-group > :not(.btn-check) + .btn,
-.btn-group > :not(.btn-check) + .submit,
+#commentform .btn-group > :not(.btn-check) + .submit,
 .btn-group > .btn-group:not(:first-child) > .btn,
-.btn-group > .btn-group:not(:first-child) > .submit {
+#commentform .btn-group > .btn-group:not(:first-child) > .submit {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
@@ -3731,12 +3962,12 @@ fieldset:disabled .submit {
 	margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .submit + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, #commentform .btn-group-sm > .submit + .dropdown-toggle-split {
 	padding-right: 0.375rem;
 	padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .submit + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, #commentform .btn-group-lg > .submit + .dropdown-toggle-split {
 	padding-right: 0.75rem;
 	padding-left: 0.75rem;
 }
@@ -3749,26 +3980,26 @@ fieldset:disabled .submit {
 
 
 .btn-group-vertical > .btn,
-.btn-group-vertical > .submit,
+#commentform .btn-group-vertical > .submit,
 .btn-group-vertical > .btn-group {
 	width: 100%;
 }
 
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .submit:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), #commentform .btn-group-vertical > .submit:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
 	margin-top: -1px;
 }
 
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .submit:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), #commentform .btn-group-vertical > .submit:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.btn-group-vertical > .btn-group:not(:last-child) > .submit {
+#commentform .btn-group-vertical > .btn-group:not(:last-child) > .submit {
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn ~ .btn, .btn-group-vertical > .submit ~ .btn, .btn-group-vertical > .btn ~ .submit, .btn-group-vertical > .submit ~ .submit,
+.btn-group-vertical > .btn ~ .btn, #commentform .btn-group-vertical > .submit ~ .btn, #commentform .btn-group-vertical > .btn ~ .submit, #commentform .btn-group-vertical > .submit ~ .submit,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.btn-group-vertical > .btn-group:not(:first-child) > .submit {
+#commentform .btn-group-vertical > .btn-group:not(:first-child) > .submit {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
@@ -4850,7 +5081,7 @@ fieldset:disabled .submit {
 	display: none;
 }
 
-.btn .badge, .submit .badge {
+.btn .badge, #commentform .submit .badge {
 	position: relative;
 	top: -1px;
 }
@@ -6932,7 +7163,7 @@ fieldset:disabled .submit {
 	opacity: 0.5;
 }
 
-.placeholder.btn::before, .placeholder.submit::before {
+.placeholder.btn::before, #commentform .placeholder.submit::before {
 	display: inline-block;
 	content: "";
 }
@@ -11161,6 +11392,16 @@ fieldset:disabled .submit {
 	.d-print-none {
 		display: none !important;
 	}
+}
+
+a,
+i {
+	transition: 0.5s;
+	text-decoration: none;
+}
+
+.current-menu-item a {
+	text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,4 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "plugins/woocommerce/woocommerce";
-
-.submit {
-	@extend .btn;
-	@extend .btn-primary;
-}
+@import "base/links";
+@import "partials/comments";

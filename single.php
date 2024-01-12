@@ -8,8 +8,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
+	<section class="container pt-5 my-5 pb-lg-4">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -29,8 +28,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
-	</main><!-- #main -->
+	</section><!-- #main -->
 
 <?php
 get_sidebar();
