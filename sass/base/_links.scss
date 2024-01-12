@@ -4,6 +4,16 @@ i {
 	text-decoration: none;
 }
 
+li {
+	list-style: none;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
 .current-menu-item a {
 	text-decoration: underline;
 }

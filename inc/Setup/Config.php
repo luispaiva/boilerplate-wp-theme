@@ -18,6 +18,7 @@ class Config {
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_action( 'switch_theme', array( $this, 'switch' ) );
+		add_action( 'widgets_init', array( $this, 'widgets' ) );
 		add_action( 'init', array( $this, 'add_image_size' ) );
 	}
 
@@ -69,6 +70,25 @@ class Config {
 	 */
 	public function switch() {
 		flush_rewrite_rules();
+	}
+
+	/**
+	 * Register widgets.
+	 *
+	 * @return void
+	 */
+	public function widgets() {
+		register_sidebar(
+			array(
+				'name'          => esc_html__( 'Sidebar', 'duicode' ),
+				'id'            => 'sidebar-1',
+				'description'   => esc_html__( 'Add widgets here.', 'duicode' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
 	}
 
 	/**

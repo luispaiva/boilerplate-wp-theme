@@ -1,0 +1,24 @@
+.search-form {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	textarea {
+		@extend .form-control;
+	}
+
+	input[type="checkbox"] {
+		@extend .form-check-input;
+	}
+
+	.submit {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+}
+
+select {
+	@extend .form-select;
+}
