@@ -54,7 +54,7 @@ get_header();
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
-	</section><!-- #main -->
+	</section><!-- #section -->
 
 <?php
 get_footer();

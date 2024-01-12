@@ -32,7 +32,7 @@ get_header(); ?>
 		endif;
 		?>
 
-	</section><!-- #main -->
+	</section><!-- #section -->
 
 <?php
 get_footer();
